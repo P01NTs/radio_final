@@ -1,0 +1,424 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px rgb(255, 168, 168);
+    border-style: dashed; */
+}
+
+:root {
+    --light-grey: #f8f9fa !important;
+    --shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important
+}
+
+html {
+    position: relative;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+}
+
+/* Apply margin-top to the scrollbar */
+/* Adjust the margin value as needed */
+body {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+    padding-top: 64px;
+}
+
+body {
+    font-family: 'Cairo Regular' !important;
+    overflow-x: hidden;
+}
+
+.nav {
+    z-index: 999;
+    width: 100vw !important;
+    height: 64px;
+    background: var(--light-grey);
+    box-shadow: var(--shadow);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+
+.logo>img {
+    width: 50px;
+    cursor: pointer;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.link {
+    list-style: none;
+}
+
+.link a {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.background-img {
+    margin-top: 64px;
+    background-image: url("./ban---ch1---ar.png");
+    background-attachment: fixed;
+    height: 180px;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+
+}
+
+.background-img-container {
+    width: 1000px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.radio_title {
+    cursor: default;
+    font-family: 'Cairo Regular' !important;
+    font-weight: bold;
+    font-size: 2.4em;
+    color: #ffffff;
+}
+
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.social img {
+    height: 40px;
+    width: 40px;
+    padding: 3px;
+    border-radius: 20%;
+    background: white;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+
+.radio_list {
+    position: inherit;
+    display: flex;
+    gap: 20px;
+}
+
+.radio_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.radio_logo:hover {
+    transform: scale(1.15);
+}
+
+.radio_logo img {
+    width: 100px;
+}
+
+.small {
+    width: 60px;
+
+}
+
+.small img {
+    width: 60px;
+}
+
+/* _________________________ */
+.wrapper {
+    background: #ffffff;
+    padding: 50px 150px;
+    margin-top: 70px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 100vw;
+}
+
+.program_card {
+    width: max-content;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.program_card:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, .8) 0px -75px 36px -28px inset;
+    z-index: 1;
+}
+
+.program_card:hover {
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.program_card img {
+    width: 255px;
+}
+
+.program_name {
+    position: absolute;
+    bottom: 15px;
+    font-size: 1.2em;
+    color: white;
+    z-index: 2;
+}
+
+.card_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 40px;
+    width: fit-content;
+    max-width: 1270px;
+}
+
+.side-menu-container {
+    position: fixed;
+    top: 64;
+    left: 0;
+    width: 100px;
+    background-color: red;
+    z-index: 1000;
+    /* Add any other styles you want for the side menu */
+}
+
+
+/* ____________________________________________________________________________ */
+
+
+/* Styling for the Spotify-like table */
+.spotify-table {
+    width: 100%;
+    max-width: 1100px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-family: Arial, sans-serif;
+}
+
+.spotify-table th,
+.spotify-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.spotify-table tr:hover {
+    background: #868686 !important;
+}
+
+/* Style the table header cells */
+.spotify-table th {
+    background-color: #777777;
+    /* Spotify green */
+    color: #fff;
+}
+
+/* Style the table rows alternately for a zebra-stripe effect */
+.spotify-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+    /* Light grey */
+}
+
+/* Style the song title and size columns */
+.song-title {
+    width: 70%;
+}
+
+.song-size {
+    width: 30%;
+}
+
+
+.lecteur-audio {
+    position: fixed;
+    bottom: 0;
+}
+
+
+.audio-player {
+    position: fixed;
+    bottom: 10px;
+    height: 50px;
+    width: 600  px;
+    background: #444;
+    box-shadow: 0 0 20px 0 #000a;
+
+    font-family: arial;
+    color: white;
+    font-size: 0.75em;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-rows: 6px auto;
+
+    .timeline {
+        background: white;
+        width: 100%;
+        position: relative;
+        cursor: pointer;
+        box-shadow: 0 2px 10px 0 #0008;
+
+        .progress {
+            background: coral;
+            width: 0%;
+            height: 100%;
+            transition: 0.25s;
+        }
+    }
+
+    .controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        padding: 0 20px;
+
+        >* {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .toggle-play {
+            &.play {
+                cursor: pointer;
+                position: relative;
+                left: 0;
+                height: 0;
+                width: 0;
+                border: 7px solid #0000;
+                border-left: 13px solid white;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+
+            &.pause {
+                height: 15px;
+                width: 20px;
+                cursor: pointer;
+                position: relative;
+
+                &:before {
+                    position: absolute;
+                    top: 0;
+                    left: 0px;
+                    background: white;
+                    content: "";
+                    height: 15px;
+                    width: 3px;
+                }
+
+                &:after {
+                    position: absolute;
+                    top: 0;
+                    right: 8px;
+                    background: white;
+                    content: "";
+                    height: 15px;
+                    width: 3px;
+                }
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        .time {
+            display: flex;
+
+            >* {
+                padding: 2px;
+            }
+        }
+
+        .volume-container {
+            cursor: pointer;
+
+            .volume-button {
+                height: 26px;
+                display: flex;
+                align-items: center;
+
+                .volume {
+                    transform: scale(0.7);
+                }
+            }
+
+            position: relative;
+            z-index: 2;
+
+            .volume-slider {
+                position: absolute;
+                left: -3px;
+                top: 15px;
+                z-index: -1;
+                width: 0;
+                height: 15px;
+                background: white;
+                box-shadow: 0 0 20px #000a;
+                transition: .25s;
+
+                .volume-percentage {
+                    background: coral;
+                    height: 100%;
+                    width: 75%;
+                }
+            }
+
+            &:hover {
+                .volume-slider {
+                    left: -123px;
+                    width: 120px;
+                }
+            }
+        }
+    }
+}
+.hidden_menu {
+    margin-top: 180px !important;
+}
